@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  sqlserver_manoelloja:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver_manoelloja
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "Senhaforte321"
+      ACCEPT_EULA: "Y"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    healthcheck:
+      test: [ "CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S 127.0.0.1 -U sa -P Senhaforte321 -Q 'SELECT 1'" ]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+      start_period: 60s
+  manoelloja_api:
+    image: manoelloja_api_image:latest
+    container_name: manoelloja_api_container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+      - "8081:8081" # Se você usa HTTPS
+    environment:
+      ASPNETCORE_URLS: "http://+:8080"
+    depends_on:
+      sqlserver_manoelloja:
+        condition: service_healthy
+
+volumes:
+  sqlserver_data:

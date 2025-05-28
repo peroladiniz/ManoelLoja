@@ -1,0 +1,51 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.log
+*.pdb
+*.opendb
+*.VC.db
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+*.obj
+*.ilk
+*.meta
+*.pch
+*.exp
+*.lib
+*.sbr
+*.res
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.intelliSense.database
+*.tlog
+*.cache
+*.VC.opendb
+
+# NuGet
+*.nupkg
+*.lock.json
+packages/
+
+# Docker
+.dockerignore
+docker-compose.*.override.yml
+*.env
+**/bin/
+**/obj/
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Arquivos locais
+*.bak
+*.log

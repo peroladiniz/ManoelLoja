@@ -1,0 +1,6 @@
+@ManoelLoja_HostAddress = http://localhost:5285
+
+GET {{ManoelLoja_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
