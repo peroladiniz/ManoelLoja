@@ -1,6 +1,6 @@
 ﻿# Loja do Seu Manoel – API de Empacotamento de Pedidos
 
-Este projeto é um microserviço desenvolvido em .NET 7 que automatiza o processo de empacotamento de pedidos para a loja de jogos online do Seu Manoel. A aplicação processa pedidos com produtos de diferentes tamanhos e determina a melhor forma de alocá-los em caixas pré-definidas.
+Este projeto é um microserviço desenvolvido em .NET 8 que automatiza o processo de empacotamento de pedidos para a loja de jogos online do Seu Manoel. A aplicação processa pedidos com produtos de diferentes tamanhos e determina a melhor forma de alocá-los em caixas pré-definidas.
 
 ## Descrição do Problema
 
