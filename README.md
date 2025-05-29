@@ -20,7 +20,7 @@ A loja do Seu Manoel deseja otimizar a forma como os pedidos são embalados. Dad
 
 ## Requisitos Atendidos
 
-- Microserviço criado em .NET 7
+- Microserviço criado em .NET 8
 - Banco de dados SQL Server
 - API e banco rodando via Docker + Docker Compose
 - Swagger disponível para testes
